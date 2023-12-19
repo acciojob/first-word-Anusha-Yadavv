@@ -1,16 +1,18 @@
 function firstWord(s) {
   // your code here
 	s=s.trim();
-	let first_word="";
-	let n=s.length;
-	for(let i=0;i<n;i++){
-		if(s[i]=" "){
-			return;
-		}else{
-			first_word+=s[i];
-		}
+	if(s==" "){
+		return " ";
 	}
-	return first_word;
+
+	let firstSpceIndex=s.indexOf(" ");
+	if(firstSpceIndex===-1){
+		return s;
+	}
+	let subString=s.substring(0,firstSpceIndex);
+	return subString;
+	
+	
 }
 
 // Do not change the code below
